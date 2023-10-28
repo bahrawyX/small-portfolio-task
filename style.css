@@ -1,0 +1,473 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+
+#hero,#about,#projects,#contact{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+    width: 60%;
+    background-color: #f5f5f5;
+    padding:1rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+#hero .right , #about .right{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    z-index: 2;
+}
+#hero .right img,#about  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#hero .left,#about .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    z-index: 2;
+    height: 100%;
+}
+#hero .left .mainTitle{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1rem;
+    z-index: 2;
+    line-height: 4rem;
+}
+#hero .left .subTitle{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 1rem;
+    z-index: 2;
+}
+#hero .left .desc,#about  .desc{
+    font-size: 1rem;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 1rem;
+    z-index: 2;
+}
+#hero .left .Button,#about .Button{
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem;
+    border: 1px solid #000;
+    cursor: pointer;
+    z-index: 2;
+
+}
+#hero .left .Button:hover,#about .Button:hover{
+    background-color: #fff;
+    color: #000;
+    z-index: 2;
+}
+
+
+.mainHeader{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1rem;
+    z-index: 2;
+    line-height: 4rem;
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+#about h4{
+    font-size: 3rem;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 1rem;
+    z-index: 2;
+    text-align: center;
+}
+#about .Button{
+    width: 50%;
+}
+#about p{
+    margin: 1rem 0;
+}
+
+
+#skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    background-color: #f5f5f5;
+    padding:1rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+}
+#skills .left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    margin-top: 3.5rem;
+}
+
+#skills .skill{
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    height: 100%;
+    margin-top:2rem ;
+}
+#skills .skill .skillHeader{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: #000;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+#skills .skill .skillBar{
+    width: 100%;
+    height: 10px;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-radius: 21px;
+}
+#skills .skill .skillBarValue{
+    background-color: #000;
+    width: 90%;
+    color: #000;
+    margin-bottom: 1rem;
+    border-radius: 21px;
+}
+#skills .skill {
+    margin-bottom: 1rem;
+}
+
+#skills .skill .skillHeader h3 {
+    margin: 0;
+}
+
+#skills .skill .skillBar {
+    width: 100%;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 21px;
+}
+
+#skills .skill .skillBarValue {
+    background-color: #000;
+    height: 100%; /* Use height to fill the skill bar */
+    border-radius: 21px;
+}
+.sa{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+      display: none;
+    }
+    #hamburger-nav {
+      display: flex;
+    }
+
+  }
+
+  /* Project Section Styles */
+#projects .row {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#projects .col-md-4 {
+  max-width: 33.333333%;
+  padding: 10px;
+}
+
+#projects .card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#projects .img img {
+  width: 100%;
+  margin: 0 auto ;
+  height: auto;
+  -webkit-user-drag: none;
+}
+
+#projects .desc {
+  padding: 10px;
+}
+
+#projects h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: center;
+  padding: 0;
+}
+
+#projects .buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+
+#projects button {
+  padding: 1rem 2rem ;
+  margin:  1.5rem;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+#projects button:hover {
+  background-color: #fff;
+  color: #000;
+  
+}
+
+/* Contact Section Styles */
+#contact{
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+#contact .contactInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+#contact .left, #contact .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+#contact .icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+#contact h4 {
+  font-size: 1.rem;
+  margin: 0;
+  padding: 0;
+}
+
+#footer{
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+#footer .left{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+/* The draggable scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #000; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners of the thumb */
+}
+
+/* The track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: lightgrey; /* Color of the track */
+  border-radius: 6px; /* Rounded corners of the track */
+}
